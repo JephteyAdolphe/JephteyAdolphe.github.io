@@ -4,7 +4,6 @@ import './App.css';
 import About from './pages/About';
 import Resume from './pages/Resume';
 import { Link } from 'react-router-dom';
-import { Spring } from 'react-spring';
 
 function App() {
   return (
