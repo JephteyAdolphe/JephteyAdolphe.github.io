@@ -1,25 +1,38 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
+import About from './pages/About';
+import Resume from './pages/Resume';
+import { Link } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+        <Route exact path="/" render={props => (
+          <React.Fragment>
+            <div className="center-div">
+              <h1 className="main-text">Jephtey Adolphe</h1>
+              <div>
+                <h2 className="main-text-dividers">|</h2>
+                <Link to="/about" className="main-text-links">About</Link>
+                <h2 className="main-text-dividers">|</h2>
+                <Link to="/resume" className="main-text-links">Resume</Link>
+                <h2 className="main-text-dividers">|</h2>
+              </div>
+              <div>
+                <a className="link-space" href="https://www.linkedin.com/in/jephtey-adolphe-160166147/">
+                  <img src={require("./linkedin.png")} alt="" className="icons" />
+                </a>
+                <a className="link-space" href="https://github.com/JephteyAdolphe">
+                  <img src={require("./github.png")} alt="" className="icons" />
+                </a>
+              </div>
+            </div>
+          </React.Fragment>
+        )} />
+        <Route path="/about" component={About} />
+        <Route path="/resume" component={Resume} />
+    </Router>
   );
 }
 
