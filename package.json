@@ -1,5 +1,6 @@
 {
   "name": "jephteyadolphe.github.io",
+  "homepage": "https://jephtey-personal.herokuapp.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,7 +13,6 @@
     "react-scripts": "3.4.1",
     "react-spring": "^8.0.27"
   },
-  "homepage": "https://jephteyadolphe.github.io/personal/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
