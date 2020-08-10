@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 import About from './pages/About';
-import Resume from './pages/Resume';
+import Resume from './pages/Resume.pdf';
 import { Link } from 'react-router-dom';
 
 function App() {
@@ -16,7 +16,9 @@ function App() {
                 <h2 className="main-text-dividers">|</h2>
                 <Link to="/about" className="main-text-links">About</Link>
                 <h2 className="main-text-dividers">|</h2>
-                <Link to="/resume" className="main-text-links">Resume</Link>
+                <a href={Resume}>
+                  <p className="main-text-links">Resume</p>
+                </a>
                 <h2 className="main-text-dividers">|</h2>
               </div>
               <div>
@@ -31,7 +33,7 @@ function App() {
           </React.Fragment>
         )} />
         <Route path="/about" component={About} />
-        <Route path="/resume" component={Resume} />
+        <Route path="/resume.pdf" component={Resume} />
     </Router>
   );
 }

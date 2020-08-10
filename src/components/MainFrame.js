@@ -5,7 +5,9 @@ export default function MainFrame() {
     return (
         <div>
             <div>
-                <button className="back-button">Go Back</button>
+                <a href="https://jephtey-personal.herokuapp.com/">
+                    <button className="back-button">Go Back</button>
+                </a>
             </div>
             <h1 className="header">About Me</h1>
             <div className="center-pic">

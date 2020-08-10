@@ -86,6 +86,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
   color: #555;
   font-style: normal;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
